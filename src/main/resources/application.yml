@@ -1,0 +1,69 @@
+telegrambot:
+  token: 5430964352:AAE-g3TNy9nwRWjC1pVog7ifL1kDsEDVWZI
+  username: zvooky_bot
+  ngrok_url: https://49a1-176-59-16-55.ngrok.io
+  endpoint: webhook
+
+server:
+  port: 8081
+
+logging:
+  level:
+    org.springframework: info
+    root: info
+  pattern:
+    console: "%d{dd-MM-yyyy HH:mm:ss.SSS} %magenta([%thread]) %-5level %logger{36} - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n"
+  file:
+    name: app.log
+
+replies:
+  insert_an_url:
+    "Вставь ссылку на видео на Youtube для скачивания музыки\n"
+  bad_url:
+    "Плохая ссылка\n"
+  download_started:
+    "Загрузка началась\n"
+  welcome:
+    "You're welcome!\n"
+  error:
+    "Ошибка в процессе обработки\n"
+
+
+exceptions:
+  bad_url_message:
+    "Плохая ссылка, вставьте другую"
+  converter_unavailable_message:
+    "Сервис недоступен"
+  excessive_filesize_message:
+    "Слишком большой файл, передача невозможна"
+  unavailable_to_download_message:
+    "Невозможно создать файл"
+  download_file_exception_message:
+    "Ошибка при скачивании файла"
+  converting_timeout_message:
+    "Истекло время ожидания конвертации файла"
+
+command:
+  program:
+    "yt-dlp"
+  output_option:
+    "--output"
+  output_format:
+    "\"%(title)s.mp3\""
+  audio_option:
+    "-x"
+  audio_format_option:
+    "--audio-format"
+  audio_format:
+    "mp3"
+  filename_option:
+    "--get-filename"
+  restrict_filename_option:
+    "--restrict-filename"
+
+url-patterns:
+  standard: (https://www\\.youtube\\.com/watch\\?v=)[\\w|\\-|_]{11}
+  m: (https://m\\.youtube\\.com/watch\\?v=)[\\w|\\-|_]{11}
+  be: (https://youtu\\.be/)[\\w|\\-|_]{11}
+

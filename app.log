@@ -1,0 +1,104 @@
+2022-12-12 16:48:14.508 [main] INFO  zvooky.enhanced.Main - Starting Main using Java 15.0.1 on HOME-PC with PID 8356 (C:\Everything\II Projects\ZvookyBotEnhanced\out\production\classes started by Anton in C:\Everything\II Projects\ZvookyBotEnhanced)
+2022-12-12 16:48:14.517 [main] INFO  zvooky.enhanced.Main - No active profile set, falling back to 1 default profile: "default"
+2022-12-12 16:48:26.688 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2022-12-12 16:48:26.766 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2022-12-12 16:48:26.767 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-12-12 16:48:27.855 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-12-12 16:48:27.860 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 12187 ms
+2022-12-12 16:48:39.654 [main] WARN  o.g.jersey.server.wadl.WadlFeature - JAXBContext implementation could not be found. WADL feature is disabled.
+2022-12-12 16:48:39.949 [main] WARN  o.g.jersey.internal.inject.Providers - A provider org.telegram.telegrambots.updatesreceivers.RestApi registered in SERVER runtime does not implement any provider interfaces applicable in the SERVER runtime. Due to constraint configuration problems the provider org.telegram.telegrambots.updatesreceivers.RestApi will be ignored. 
+2022-12-12 16:48:40.773 [main] INFO  o.g.g.http.server.NetworkListener - Started listener bound to [localhost:80]
+2022-12-12 16:48:40.777 [main] INFO  o.g.grizzly.http.server.HttpServer - [HttpServer] Started.
+2022-12-12 16:48:42.739 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+2022-12-12 16:48:42.826 [main] INFO  zvooky.enhanced.Main - Started Main in 33.512 seconds (JVM running for 37.882)
+2022-12-12 16:49:21.936 [http-nio-8081-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-12-12 16:49:21.937 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-12-12 16:49:21.938 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2022-12-12 16:49:23.050 [http-nio-8081-exec-1] INFO  z.e.s.u.UpdateHandlerServiceImpl - User username = maadme firstname = Anton M. added
+2022-12-12 17:11:46.713 [main] INFO  zvooky.enhanced.Main - Starting Main using Java 15.0.1 on HOME-PC with PID 6668 (C:\Everything\II Projects\ZvookyBotEnhanced\out\production\classes started by Anton in C:\Everything\II Projects\ZvookyBotEnhanced)
+2022-12-12 17:11:46.727 [main] INFO  zvooky.enhanced.Main - No active profile set, falling back to 1 default profile: "default"
+2022-12-12 17:11:54.816 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2022-12-12 17:11:54.864 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2022-12-12 17:11:54.865 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-12-12 17:11:55.828 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-12-12 17:11:55.829 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 8414 ms
+2022-12-12 17:12:03.679 [main] WARN  o.g.jersey.server.wadl.WadlFeature - JAXBContext implementation could not be found. WADL feature is disabled.
+2022-12-12 17:12:04.043 [main] WARN  o.g.jersey.internal.inject.Providers - A provider org.telegram.telegrambots.updatesreceivers.RestApi registered in SERVER runtime does not implement any provider interfaces applicable in the SERVER runtime. Due to constraint configuration problems the provider org.telegram.telegrambots.updatesreceivers.RestApi will be ignored. 
+2022-12-12 17:12:05.714 [main] INFO  o.g.g.http.server.NetworkListener - Started listener bound to [localhost:80]
+2022-12-12 17:12:05.719 [main] INFO  o.g.grizzly.http.server.HttpServer - [HttpServer] Started.
+2022-12-12 17:12:07.656 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+2022-12-12 17:12:07.922 [main] INFO  zvooky.enhanced.Main - Started Main in 23.557 seconds (JVM running for 25.445)
+2022-12-12 17:12:19.735 [http-nio-8081-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-12-12 17:12:19.750 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-12-12 17:12:19.754 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+2022-12-12 17:12:20.320 [http-nio-8081-exec-1] INFO  z.e.s.u.UpdateHandlerServiceImpl - New user username=@maadme firstname=Anton M. added
+2022-12-12 17:12:24.684 [http-nio-8081-exec-2] INFO  z.e.s.u.UpdateHandlerServiceImpl - New thread "DownloadAndSendTrackService" is about to start
+2022-12-12 17:12:32.427 [http-nio-8081-exec-3] INFO  z.e.s.u.UpdateHandlerServiceImpl - New thread "DownloadAndSendTrackService" is about to start
+2022-12-12 17:16:45.804 [main] INFO  zvooky.enhanced.Main - Starting Main using Java 15.0.1 on HOME-PC with PID 12072 (C:\Everything\II Projects\ZvookyBotEnhanced\out\production\classes started by Anton in C:\Everything\II Projects\ZvookyBotEnhanced)
+2022-12-12 17:16:45.818 [main] INFO  zvooky.enhanced.Main - No active profile set, falling back to 1 default profile: "default"
+2022-12-12 17:16:54.455 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2022-12-12 17:16:54.484 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2022-12-12 17:16:54.485 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-12-12 17:16:55.053 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-12-12 17:16:55.061 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 8676 ms
+2022-12-12 17:17:02.629 [main] WARN  o.g.jersey.server.wadl.WadlFeature - JAXBContext implementation could not be found. WADL feature is disabled.
+2022-12-12 17:17:03.208 [main] WARN  o.g.jersey.internal.inject.Providers - A provider org.telegram.telegrambots.updatesreceivers.RestApi registered in SERVER runtime does not implement any provider interfaces applicable in the SERVER runtime. Due to constraint configuration problems the provider org.telegram.telegrambots.updatesreceivers.RestApi will be ignored. 
+2022-12-12 17:17:04.803 [main] INFO  o.g.g.http.server.NetworkListener - Started listener bound to [localhost:80]
+2022-12-12 17:17:04.811 [main] INFO  o.g.grizzly.http.server.HttpServer - [HttpServer] Started.
+2022-12-12 17:17:08.278 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+2022-12-12 17:17:08.479 [main] INFO  zvooky.enhanced.Main - Started Main in 24.946 seconds (JVM running for 26.984)
+2022-12-12 17:17:20.309 [http-nio-8081-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-12-12 17:17:20.328 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-12-12 17:17:20.333 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 4 ms
+2022-12-12 17:17:21.112 [http-nio-8081-exec-1] INFO  z.e.s.u.UpdateHandlerServiceImpl - New user username=@maadme firstname=Anton M. added
+2022-12-12 17:17:29.460 [http-nio-8081-exec-2] INFO  z.e.s.u.UpdateHandlerServiceImpl - New thread "DownloadAndSendTrackService" is about to start
+2022-12-12 17:17:33.440 [pool-1-thread-1] INFO  z.e.s.d.DownloadAndSendTrackService - ERROR: [youtube] HFc1gqC-ZUv: Video unavailable
+2022-12-12 17:17:39.438 [http-nio-8081-exec-3] INFO  z.e.s.u.UpdateHandlerServiceImpl - New thread "DownloadAndSendTrackService" is about to start
+2022-12-12 17:17:44.074 [pool-1-thread-2] INFO  z.e.s.d.DownloadAndSendTrackService - null
+2022-12-12 17:18:05.512 [pool-1-thread-2] INFO  z.e.s.d.DownloadAndSendTrackService - null
+2022-12-12 17:21:41.658 [main] INFO  zvooky.enhanced.Main - Starting Main using Java 15.0.1 on HOME-PC with PID 7224 (C:\Everything\II Projects\ZvookyBotEnhanced\out\production\classes started by Anton in C:\Everything\II Projects\ZvookyBotEnhanced)
+2022-12-12 17:21:41.671 [main] INFO  zvooky.enhanced.Main - No active profile set, falling back to 1 default profile: "default"
+2022-12-12 17:21:49.860 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2022-12-12 17:21:49.890 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2022-12-12 17:21:49.891 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-12-12 17:21:50.658 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-12-12 17:21:50.660 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 8379 ms
+2022-12-12 17:21:59.011 [main] WARN  o.g.jersey.server.wadl.WadlFeature - JAXBContext implementation could not be found. WADL feature is disabled.
+2022-12-12 17:21:59.667 [main] WARN  o.g.jersey.internal.inject.Providers - A provider org.telegram.telegrambots.updatesreceivers.RestApi registered in SERVER runtime does not implement any provider interfaces applicable in the SERVER runtime. Due to constraint configuration problems the provider org.telegram.telegrambots.updatesreceivers.RestApi will be ignored. 
+2022-12-12 17:22:01.220 [main] INFO  o.g.g.http.server.NetworkListener - Started listener bound to [localhost:80]
+2022-12-12 17:22:01.223 [main] INFO  o.g.grizzly.http.server.HttpServer - [HttpServer] Started.
+2022-12-12 17:22:04.551 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+2022-12-12 17:22:04.686 [main] INFO  zvooky.enhanced.Main - Started Main in 27.344 seconds (JVM running for 30.312)
+2022-12-12 17:22:07.032 [http-nio-8081-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-12-12 17:22:07.041 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-12-12 17:22:07.048 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 6 ms
+2022-12-12 17:22:07.875 [http-nio-8081-exec-1] INFO  z.e.s.u.UpdateHandlerServiceImpl - New user username=@maadme firstname=Anton M. added
+2022-12-12 17:22:08.720 [http-nio-8081-exec-2] INFO  z.e.s.u.UpdateHandlerServiceImpl - New thread "DownloadAndSendTrackService" is about to start
+2022-12-12 17:22:14.375 [pool-1-thread-1] INFO  z.e.s.d.DownloadAndSendTrackService - yt-dlp error message: null
+2022-12-12 17:22:16.668 [http-nio-8081-exec-3] INFO  z.e.s.u.UpdateHandlerServiceImpl - New thread "DownloadAndSendTrackService" is about to start
+2022-12-12 17:22:20.712 [http-nio-8081-exec-4] INFO  z.e.s.u.UpdateHandlerServiceImpl - New thread "DownloadAndSendTrackService" is about to start
+2022-12-12 17:22:21.935 [pool-1-thread-2] INFO  z.e.s.d.DownloadAndSendTrackService - yt-dlp error message: null
+2022-12-12 17:22:27.987 [pool-1-thread-3] INFO  z.e.s.d.DownloadAndSendTrackService - yt-dlp error message: null
+2022-12-12 17:22:28.080 [pool-1-thread-1] INFO  z.e.s.d.DownloadAndSendTrackService - yt-dlp error message: null
+2022-12-12 17:22:44.653 [pool-1-thread-2] INFO  z.e.s.d.DownloadAndSendTrackService - yt-dlp error message: null
+2022-12-12 17:22:46.051 [pool-1-thread-3] INFO  z.e.s.d.DownloadAndSendTrackService - yt-dlp error message: null
+2022-12-12 17:26:53.898 [main] INFO  zvooky.enhanced.Main - Starting Main using Java 15.0.1 on HOME-PC with PID 9004 (C:\Everything\II Projects\ZvookyBotEnhanced\out\production\classes started by Anton in C:\Everything\II Projects\ZvookyBotEnhanced)
+2022-12-12 17:26:53.931 [main] INFO  zvooky.enhanced.Main - No active profile set, falling back to 1 default profile: "default"
+2022-12-12 17:27:00.912 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2022-12-12 17:27:00.960 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2022-12-12 17:27:00.961 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.65]
+2022-12-12 17:27:01.908 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2022-12-12 17:27:01.909 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 7197 ms
+2022-12-12 17:27:09.464 [main] WARN  o.g.jersey.server.wadl.WadlFeature - JAXBContext implementation could not be found. WADL feature is disabled.
+2022-12-12 17:27:09.838 [main] WARN  o.g.jersey.internal.inject.Providers - A provider org.telegram.telegrambots.updatesreceivers.RestApi registered in SERVER runtime does not implement any provider interfaces applicable in the SERVER runtime. Due to constraint configuration problems the provider org.telegram.telegrambots.updatesreceivers.RestApi will be ignored. 
+2022-12-12 17:27:11.337 [main] INFO  o.g.g.http.server.NetworkListener - Started listener bound to [localhost:80]
+2022-12-12 17:27:11.346 [main] INFO  o.g.grizzly.http.server.HttpServer - [HttpServer] Started.
+2022-12-12 17:27:13.710 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+2022-12-12 17:27:13.784 [main] INFO  zvooky.enhanced.Main - Started Main in 23.082 seconds (JVM running for 25.342)
+2022-12-12 17:27:14.170 [http-nio-8081-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-12-12 17:27:14.197 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2022-12-12 17:27:14.202 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 5 ms
+2022-12-12 17:27:14.969 [http-nio-8081-exec-1] INFO  z.e.s.u.UpdateHandlerServiceImpl - New user username=@maadme firstname=Anton M. added
+2022-12-12 17:27:18.409 [http-nio-8081-exec-2] INFO  z.e.s.u.UpdateHandlerServiceImpl - New thread "DownloadAndSendTrackService" is about to start
+2022-12-12 17:27:24.077 [pool-1-thread-1] INFO  z.e.s.d.DownloadAndSendTrackService - yt-dlp error message: null
+2022-12-12 17:27:48.798 [pool-1-thread-1] INFO  z.e.s.d.DownloadAndSendTrackService - yt-dlp error message: null

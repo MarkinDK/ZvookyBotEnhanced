@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+    id "io.freefair.lombok" version "6.6-rc1"
+}
+
+group 'bot.zvooky'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation group: 'org.telegram', name: 'telegrambots', version: '6.1.0'
+    implementation group: 'com.squareup.okhttp3', name: 'okhttp', version: '5.0.0-alpha.10'
+    compileOnly group: 'org.projectlombok', name: 'lombok', version: '1.18.24'
+    annotationProcessor group: 'org.projectlombok', name: 'lombok', version: '1.18.24'
+    implementation group: 'org.springframework.boot', name: 'spring-boot-configuration-processor', version: '2.7.5'
+    annotationProcessor group: 'org.springframework.boot', name: 'spring-boot-configuration-processor', version: '2.7.5'
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.7.4'
+}
+
+test {
+    useJUnitPlatform()
+}
