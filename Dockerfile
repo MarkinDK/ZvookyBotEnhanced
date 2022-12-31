@@ -35,4 +35,4 @@ WORKDIR /usr/app/
 COPY --from=BUILD /usr/app/build/libs/ZvookyBotEnhanced-1.0-SNAPSHOT.jar .
 
 ENTRYPOINT ["java","-jar","ZvookyBotEnhanced-1.0-SNAPSHOT.jar"]
-#EXPOSE 8081
+EXPOSE 8080
