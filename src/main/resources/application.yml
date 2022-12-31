@@ -1,11 +1,11 @@
 telegrambot:
   token: 5430964352:AAE-g3TNy9nwRWjC1pVog7ifL1kDsEDVWZI
   username: zvooky_bot
-  ngrok_url: https://dd5e-176-59-107-238.ngrok.io
+  ngrok_url: https://zvooked-antonm.amvera.io
   endpoint: webhook
 
 server:
-  port: 8080
+  port: 80
 
 logging:
   level:

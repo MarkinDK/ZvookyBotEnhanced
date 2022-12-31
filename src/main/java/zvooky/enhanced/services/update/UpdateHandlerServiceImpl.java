@@ -1,7 +1,11 @@
 package zvooky.enhanced.services.update;
 
 import lombok.extern.slf4j.Slf4j;
+import org.glassfish.grizzly.http.server.NetworkListener;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext;
+import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Service;
 import org.telegram.telegrambots.meta.api.methods.BotApiMethod;
 import org.telegram.telegrambots.meta.api.objects.Update;
@@ -19,6 +23,8 @@ import java.util.concurrent.Executors;
 @Slf4j
 @Service
 public class UpdateHandlerServiceImpl implements UpdateHandlerService {
+    @Autowired
+    private ApplicationContext context;
     private final Set<String> users = new HashSet<>();
 
     private final ExecutorService executorService;
@@ -48,7 +54,6 @@ public class UpdateHandlerServiceImpl implements UpdateHandlerService {
     @Override
     public BotApiMethod<?> handleUpdate(MessageSender bot, Update update) {
         if (update.hasMessage() && update.getMessage().hasText()) {
-
             User user = update.getMessage().getFrom();
             long chatId = update.getMessage().getChatId();
 
