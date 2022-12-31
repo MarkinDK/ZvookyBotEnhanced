@@ -11,6 +11,8 @@ import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 import zvooky.enhanced.services.update.UpdateHandlerService;
 
+import java.util.concurrent.CompletableFuture;
+
 @Slf4j
 public class ZvookyBot extends TelegramWebhookBot implements MessageSender {
     @Getter
@@ -62,14 +64,13 @@ public class ZvookyBot extends TelegramWebhookBot implements MessageSender {
     }
 
     @Override
-    public void sendAudio(SendAudio audio) {
+    public CompletableFuture<?> sendAudio(SendAudio audio) {
         try {
-            executeAsync(audio);
+            return executeAsync(audio);
         } catch (RuntimeException e) {
-            e.printStackTrace();
             log.error(e.getMessage(), e);
         }
-
+        return null;
     }
 
     @Override
@@ -77,7 +78,6 @@ public class ZvookyBot extends TelegramWebhookBot implements MessageSender {
         try {
             executeAsync(message);
         } catch (TelegramApiException e) {
-            e.printStackTrace();
             log.error(e.getMessage(), e);
         }
     }

@@ -12,6 +12,8 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.ExecutionException;
 
 @Slf4j
 @Service
@@ -42,12 +44,16 @@ public class DownloadAndSendTrackService implements Runnable {
             getFilenameByUrl(url);
             if (filename != null) {
                 downloadTrackByUrl();
-                sendAudio();
+                CompletableFuture<?> future = sendAudio();
+                if (future != null) {
+                    future.get();
+                }
+                deleteFile();
             }
         } catch (RuntimeException |
                  IOException |
-                 InterruptedException e) {//find out if it should be handled differently
-            e.printStackTrace();
+                 InterruptedException |
+                 ExecutionException e) {//find out if it should be handled differently
             log.error(e.getMessage(), e);
             SendMessage reply = new SendMessage();
             reply.setChatId(chatId);
@@ -84,7 +90,7 @@ public class DownloadAndSendTrackService implements Runnable {
     private void downloadTrackByUrl() throws IOException, InterruptedException {
         try {
             messageSender.sendTextMessage(messageSender.constructTextMessage(
-                    "Download of " + filename + " started",
+                    "Загрузка трека\n" + filename + "\nначалась",
                     chatId
             ));
 
@@ -105,7 +111,6 @@ public class DownloadAndSendTrackService implements Runnable {
             process.waitFor();
 
         } catch (IOException | InterruptedException e) {
-            e.printStackTrace();
             log.error(e.getMessage(), e);
             SendMessage reply = new SendMessage();
             reply.setChatId(chatId);
@@ -114,18 +119,28 @@ public class DownloadAndSendTrackService implements Runnable {
         }
     }
 
-    private void sendAudio() {
+    private CompletableFuture<?> sendAudio() {
         try {
             SendAudio audioToSend = new SendAudio();
+            File directory = new File("/usr/app");
+            for (File file : directory.listFiles()) {
+                String name = file.getName();
+                if (name.contains(filename)) {
+                    filename = name;
+                }
+            }
+            filename=filename.substring(0,filename.length()-1);
             audioToSend.setAudio(new InputFile(new File(filename)));
             audioToSend.setChatId(chatId);
-            messageSender.sendAudio(audioToSend);
+            return messageSender.sendAudio(audioToSend);
         } catch (RuntimeException e) {
-            e.printStackTrace();
             log.error(e.getMessage(), e);
         }
-
-
+        return null;
     }
 
+    private void deleteFile() {
+        File track = new File(filename);
+        track.delete();
+    }
 }
