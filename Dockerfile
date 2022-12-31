@@ -31,7 +31,7 @@ ENV JAVA_HOME=/jre
 ENV PATH="${JAVA_HOME}/bin:${PATH}"
 
 # копируем JRE из базового образа
-COPY --from=corretto-jdk /customjre $JAVA_HOME
+COPY --from=corretto-jdk /customjre $JAVA_HOME/
 
 ENV APP_HOME=/usr/app/
 WORKDIR $APP_HOME
