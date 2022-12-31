@@ -1,7 +1,6 @@
 FROM gradle:latest AS BUILD
-ENV APP_HOME=/usr/app/
-WORKDIR $APP_HOME
-COPY build.gradle settings.gradle $APP_HOME
+WORKDIR /usr/app/
+COPY build.gradle settings.gradle /usr/app/
 COPY . .
 RUN gradle clean build
 
@@ -27,15 +26,13 @@ FROM python:3.7-alpine as progs
 RUN python3.7 -m pip install -U yt-dlp
 RUN apk add ffmpeg
 
-ENV JAVA_HOME=/jre
-ENV PATH="${JAVA_HOME}/bin:${PATH}"
+ENV PATH="/jre/bin:${PATH}"
 
 # копируем JRE из базового образа
-COPY --from=corretto-jdk /customjre $JAVA_HOME
+COPY --from=corretto-jdk /customjre /jre/
 
-ENV APP_HOME=/usr/app/
-WORKDIR $APP_HOME
-COPY --from=BUILD $APP_HOME/build/libs/ZvookyBotEnhanced-1.0-SNAPSHOT.jar .
+WORKDIR /usr/app/
+COPY --from=BUILD /usr/app/build/libs/ZvookyBotEnhanced-1.0-SNAPSHOT.jar .
 
 ENTRYPOINT ["java","-jar","ZvookyBotEnhanced-1.0-SNAPSHOT.jar"]
 #EXPOSE 8081
