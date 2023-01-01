@@ -1,11 +1,11 @@
 telegrambot:
   token: 5430964352:AAE-g3TNy9nwRWjC1pVog7ifL1kDsEDVWZI
   username: zvooky_bot
-  ngrok_url: https://mybot-antonm.amvera.io
+  ngrok_url: https://6a06-176-59-107-10.ngrok.io
   endpoint: webhook
 
 server:
-  port: 80
+  port: 8081
 
 logging:
   level:
@@ -66,4 +66,6 @@ url-patterns:
   standard: (https://www\\.youtube\\.com/watch\\?v=)[\\w|\\-|_]{11}
   m: (https://m\\.youtube\\.com/watch\\?v=)[\\w|\\-|_]{11}
   be: (https://youtu\\.be/)[\\w|\\-|_]{11}
+  shorts: (https://youtube\\.com/shorts/)[\\w|\\-|_]{11}
+  wshorts: (https://www\\.youtube\\.com/shorts/)[\\w|\\-|_]{11}
 
