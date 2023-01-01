@@ -46,7 +46,7 @@ public class AppConfig {
         bot.setUsername(botPropertiesHolder.getUsername());
         Logger.getLogger(OkHttpClient.class.getName()).setLevel(Level.FINE);
 
-        deleteWebhook(botPropertiesHolder.getToken());
+//        deleteWebhook(botPropertiesHolder.getToken());
 
         bot.setWebhook(setWebhook);
 
