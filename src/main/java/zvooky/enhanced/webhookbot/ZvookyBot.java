@@ -6,6 +6,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.telegram.telegrambots.bots.TelegramWebhookBot;
 import org.telegram.telegrambots.meta.api.methods.BotApiMethod;
 import org.telegram.telegrambots.meta.api.methods.send.SendAudio;
+import org.telegram.telegrambots.meta.api.methods.send.SendDocument;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
@@ -78,6 +79,15 @@ public class ZvookyBot extends TelegramWebhookBot implements MessageSender {
         try {
             executeAsync(message);
         } catch (TelegramApiException e) {
+            log.error(e.getMessage(), e);
+        }
+    }
+
+    @Override
+    public void sendDocument(SendDocument document) {
+        try {
+            executeAsync(document);
+        } catch (RuntimeException e) {
             log.error(e.getMessage(), e);
         }
     }

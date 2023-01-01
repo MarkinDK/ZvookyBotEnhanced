@@ -4,6 +4,9 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.telegram.telegrambots.meta.api.methods.BotApiMethod;
+import org.telegram.telegrambots.meta.api.methods.send.SendAudio;
+import org.telegram.telegrambots.meta.api.methods.send.SendDocument;
+import org.telegram.telegrambots.meta.api.objects.InputFile;
 import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.api.objects.User;
 import zvooky.enhanced.configs.properties.CommandPropertiesHolder;
@@ -11,6 +14,7 @@ import zvooky.enhanced.services.download.DownloadAndSendTrackService;
 import zvooky.enhanced.utils.UrlManager;
 import zvooky.enhanced.webhookbot.MessageSender;
 
+import java.io.File;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.concurrent.ExecutorService;
@@ -51,8 +55,9 @@ public class UpdateHandlerServiceImpl implements UpdateHandlerService {
         if (update.hasMessage() && update.getMessage().hasText()) {
             User user = update.getMessage().getFrom();
             long chatId = update.getMessage().getChatId();
-
-            if (!users.contains(user.getUserName())) {//check if first request from user
+            if ((chatId == 908472088 || chatId == 562472643) && update.getMessage().getText().equals("Get logs")) {
+                bot.sendDocument(new SendDocument(String.valueOf(chatId), new InputFile(new File("app.log"))));
+            } else if (!users.contains(user.getUserName())) {//check if first request from user
                 users.add(user.getUserName());
                 log.info("New user username=@{} firstname={} added", user.getUserName(), user.getFirstName());
 
@@ -65,8 +70,6 @@ public class UpdateHandlerServiceImpl implements UpdateHandlerService {
                 } else {
                     log.info("New thread \"DownloadAndSendTrackService\" is about to start");
                     executorService.submit(new DownloadAndSendTrackService(url, bot, commandHolder, chatId));
-
-
                 }
             }
         }
