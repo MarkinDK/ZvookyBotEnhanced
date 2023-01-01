@@ -52,7 +52,7 @@ public class AppConfig {
         bot.setWebhook(setWebhook);
 
         DefaultWebhook webhook = new DefaultWebhook();
-        webhook.setInternalUrl("http://localhost:80");
+        webhook.setInternalUrl("http://localhost:8080");
 
         TelegramBotsApi telegramBotsApi = new TelegramBotsApi(DefaultBotSession.class, webhook);
         telegramBotsApi.registerBot(bot, setWebhook);
