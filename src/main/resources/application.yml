@@ -1,7 +1,7 @@
 telegrambot:
-  token: 5430964352:AAE-g3TNy9nwRWjC1pVog7ifL1kDsEDVWZI
+  token:
   username: zvooky_bot
-  ngrok_url: https://6a06-176-59-107-10.ngrok.io
+  ngrok_url: https://d906-176-59-121-149.ngrok.io
   endpoint: webhook
 
 server:

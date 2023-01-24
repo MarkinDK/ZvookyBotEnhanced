@@ -4,7 +4,6 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.telegram.telegrambots.meta.api.methods.BotApiMethod;
-import org.telegram.telegrambots.meta.api.methods.send.SendAudio;
 import org.telegram.telegrambots.meta.api.methods.send.SendDocument;
 import org.telegram.telegrambots.meta.api.objects.InputFile;
 import org.telegram.telegrambots.meta.api.objects.Update;
@@ -25,6 +24,9 @@ import java.util.concurrent.Executors;
 public class UpdateHandlerServiceImpl implements UpdateHandlerService {
 
     private final Set<String> users = new HashSet<>();
+
+    private final int MY_CHAT_ID_1 = 1;
+    private final int MY_CHAT_ID_2 = 2;
 
     private final ExecutorService executorService;
     private final CommandPropertiesHolder commandHolder;
@@ -55,7 +57,7 @@ public class UpdateHandlerServiceImpl implements UpdateHandlerService {
         if (update.hasMessage() && update.getMessage().hasText()) {
             User user = update.getMessage().getFrom();
             long chatId = update.getMessage().getChatId();
-            if ((chatId == 908472088 || chatId == 562472643) && update.getMessage().getText().equals("Get logs")) {
+            if ((chatId == MY_CHAT_ID_1 || chatId == MY_CHAT_ID_2) && update.getMessage().getText().equals("Get logs")) {
                 bot.sendDocument(new SendDocument(String.valueOf(chatId), new InputFile(new File("app.log"))));
             } else if (!users.contains(user.getUserName())) {//check if first request from user
                 users.add(user.getUserName());

@@ -53,7 +53,7 @@ public class DownloadAndSendTrackService implements Runnable {
         } catch (RuntimeException |
                  IOException |
                  InterruptedException |
-                 ExecutionException e) {//find out if it should be handled differently
+                 ExecutionException e) {
             log.error(e.getMessage(), e);
             SendMessage reply = new SendMessage();
             reply.setChatId(chatId);
@@ -122,14 +122,6 @@ public class DownloadAndSendTrackService implements Runnable {
     private CompletableFuture<?> sendAudio() {
         try {
             SendAudio audioToSend = new SendAudio();
-            File directory = new File("/usr/app");
-            for (File file : directory.listFiles()) {
-                String name = file.getName();
-                if (name.contains(filename)) {
-                    filename = name;
-                }
-            }
-            filename=filename.substring(0,filename.length()-1);
             audioToSend.setAudio(new InputFile(new File(filename)));
             audioToSend.setChatId(chatId);
             return messageSender.sendAudio(audioToSend);
